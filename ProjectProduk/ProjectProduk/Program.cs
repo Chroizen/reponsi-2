@@ -70,7 +70,7 @@ namespace ProjectProduk
             produk.HargaBeli = double.Parse(Console.ReadLine());
             Console.Write("Harga Jual : ");
             produk.HargaJual = double.Parse(Console.ReadLine());
-
+            daftarProduk.Add(produk);
             Console.WriteLine("\nTekan ENTER untuk kembali ke menu");
             Console.ReadKey();
         }
@@ -113,8 +113,8 @@ namespace ProjectProduk
             Console.WriteLine("Data Produk");
             foreach (Produk produk in daftarProduk)
             {
-                Console.WriteLine("{0}. Kode Produk: {1}, Nama Produk: {2}, Harga Beli: {3}, Harga Jual: {4}", Urut, produk.KodeProduk, produk.NamaProduk, produk.HargaBeli, produk.HargaJual);
                 Urut++;
+                Console.WriteLine("{0}. Kode Produk: {1}, Nama Produk: {2}, Harga Beli: {3}, Harga Jual: {4}", Urut, produk.KodeProduk, produk.NamaProduk, produk.HargaBeli, produk.HargaJual);
             }
             if (Urut < 1)
             {
