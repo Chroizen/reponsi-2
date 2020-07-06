@@ -60,17 +60,23 @@ namespace ProjectProduk
         {
             Console.Clear();
 
-            Produk produk = new Produk();
+            Produk produk=new Produk();
             Console.WriteLine("Tambah Data Produk\n");
+
             Console.Write("Kode Produk : ");
             produk.KodeProduk = Console.ReadLine();
+            
             Console.Write("Nama Produk : ");
             produk.NamaProduk = Console.ReadLine();
+            
             Console.Write("Harga Beli : ");
             produk.HargaBeli = double.Parse(Console.ReadLine());
+            
             Console.Write("Harga Jual : ");
             produk.HargaJual = double.Parse(Console.ReadLine());
+            
             daftarProduk.Add(produk);
+            
             Console.WriteLine("\nTekan ENTER untuk kembali ke menu");
             Console.ReadKey();
         }
@@ -80,9 +86,12 @@ namespace ProjectProduk
             Console.Clear();
 
             int no = -1, haps = -1;
+            
             Console.WriteLine("Hapus Data Produk");
+            
             Console.Write("Kode Produk : ");
             string kode = Console.ReadLine();
+            
             foreach (Produk produk in daftarProduk)
             {
                 no++;
@@ -110,7 +119,9 @@ namespace ProjectProduk
             Console.Clear();
 
             int Urut = 0;
+           
             Console.WriteLine("Data Produk");
+            
             foreach (Produk produk in daftarProduk)
             {
                 Urut++;
@@ -120,6 +131,7 @@ namespace ProjectProduk
             {
                 Console.WriteLine("Data Produk Kosong");
             }
+            
             Console.WriteLine("\nTekan enter untuk kembali ke menu");
             Console.ReadKey();
         }
